@@ -1,15 +1,16 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: 'yamanote.proxy.rlwy.net',
   user: 'root',
-  password: 'Narmi@2004',       // your MySQL password
-  database: 'reactdb'
+  password: 'PgFhpnBHxYnDWMbwzOZpqJjsqJbtWBxS',
+  database: 'railway',
+  port: 45850
 });
 
 db.connect((err) => {
   if (err) throw err;
-  console.log('Connected to MySQL DB');
+  console.log('✅ Connected to Railway MySQL');
 });
 
 module.exports = db;
